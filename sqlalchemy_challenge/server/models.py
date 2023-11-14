@@ -31,9 +31,9 @@ Base = declarative_base(metadata=metadata)
 pet_owner = Table(
     "pet_owner",
     Base.metadata,
+    # Column("id", Integer, primary_key=True), # would remove primary key constraint on pet_id and owner_id
     Column("pet_id", Integer, ForeignKey("pets.id"), primary_key=True),
     Column("owner_id", Integer, ForeignKey("owners.id"), primary_key=True),
-    extend_existing=True,
 )
 
 

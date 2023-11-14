@@ -1,0 +1,9 @@
+The challenge to be reviewed during tomorrow's "discussion question" conversation is:
+
+1. Given today's final source code, turn the one-to-many between Pet and Owner into a many-to-many between Pet -> PetOwner <- Owner.
+
+The PetOwner model/table should for sure have two columns called 'pet_id' and 'owner_id' that point to the pets and owners tables respectively.
+Please try your best to build the following associations:
+
+Pet class: pet_owners (direct), owners (through)
+Owner class: pet_owners (direct), pets (through)
